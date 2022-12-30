@@ -1,0 +1,68 @@
+
+<div class="container-fluid" id="buttons">
+    <button type="button" class="btn btn-primary" routerLink="/managebooking">Manage Booking</button>
+    <button type="button" class="btn btn-primary mx-2" routerLink="/adminlogin">Admin Login</button>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3" id="search">
+                <form [formGroup]="formValue">
+                <h3 class="search">Search</h3>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="text" class="col-form-label">Check-in </label>
+                    </div>
+                    <div class="col-auto" id="input">
+                        <input type="date" id="date" class="form-control"  formControlName="checkin" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+
+                <div class="row g-3 align-items-center my-2">
+                    <div class="col-auto">
+                        <label for="text" class="col-form-label">Check-out</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="date" id="date" class="form-control"  formControlName="checkout" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center my-2">
+                    <div class="col-auto">
+                        <label for="text" class="col-form-label">Capacity</label>
+                    </div>
+                    <div class="col-auto" id="dropbox">
+                        <input type="number" [min]="1" class="form-control" formControlName="capacity" aria-describedby="passwordHelpInline">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="searchButton" (click)="filterSearch()" [disabled]="formValue.invalid">Search</button>
+            </form>
+            </div>
+        <div class="col-9">
+            <div class="container">
+                <div class="row" *ngFor="let i of camp | paginate: 
+                { itemsPerPage: 4, currentPage: p }" id="row" style="margin-top: 4px;">
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-3" id="col3">
+                                <img class="img-responsive" id="image" src="{{i.image}}">
+                            </div>
+                            <div class="col-3 col">
+                                <p class="mt-2"> {{i.campName}}</p>
+                                <p class="capacity mt-2">max {{i.capacity}} person </p>
+                            </div>
+                            <div class="col-6">
+                                <p>{{i.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <p>INR {{i.rate}} per night</p>
+                        <button type="button" class="btn btn-primary my-2" routerLink="/bookingscreen/{{i.id}}" >Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <pagination-controls (pageChange)="p = $event" class="text-center">
+    </pagination-controls>
+</div>

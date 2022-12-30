@@ -1,0 +1,70 @@
+.container{
+    border:2px solid black
+}
+.row
+{
+    margin-top:40px
+}
+.card-body{
+    display:flex
+}
+.form-control{
+    width:65%;
+}
+.btn{
+    margin-top:20px;
+    margin-bottom:5px
+}
+.card-img-top{
+    height:200px
+}
+.mb-3 {
+    display: flex;
+}
+#form
+{
+    margin-top:20px;
+}
+.form-label {
+    width: 150px;
+}
+.form{
+    width:70%;
+}
+.details{
+    color:red
+}
+#submit{
+    margin-left:20px;
+}
+#row
+{
+    background-color: rgb(226, 221, 221);
+}
+#image
+{
+    height: 405px;
+    width: 507px;
+    margin-top: 45px;
+}
+.text-right
+{
+    text-align: right;
+    margin-right: 61px;
+}
+#booking
+{
+    margin-right: 27px;
+    border: 2px solid black
+}
+#col6{
+    margin-top: -80px;
+    padding-left: 2px;
+}
+.col-8{
+    background-color: azure;
+}
+#col-6
+{
+    margin-top: -74px;
+}

@@ -1,0 +1,15 @@
+<div class="container">
+    <form [formGroup]="view" (ngSubmit)="searchRefNum()">
+        <label for="referenceNumber" class="col-sm-4 col-form-label"><b>Enter Your Reference Number</b></label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" formControlName="referencenumber" id="referencenumber">
+        </div>
+        <div class="m-2">
+            <button type="submit" class="btn btn-success">Search</button>
+        </div>
+    </form>
+    <div>
+        <button type="button" class="btn btn-danger" routerLink="">Back to Dashboard</button>
+    </div>
+    
+</div> 

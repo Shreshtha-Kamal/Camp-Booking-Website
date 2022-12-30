@@ -1,0 +1,71 @@
+<div class="text-right">
+    
+    <button type="button" class="btn btn-primary mx-2" routerLink="/">Back to dashboard</button>
+    <button type="button" class="btn btn-primary mx-2" routerLink="/managebooking">Manage Booking</button>
+    <button type="button" class="btn btn-primary mx-2" routerLink="/adminlogin">Admin Login</button>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-6" id="col6">
+            <img class="img-responsive" id="image" src="{{camp.image}}">
+        </div>
+        <div class="col-6" id="col-6">
+            <div class="row">
+                <div class="col-8">
+                    <p> {{camp.description}} </p>
+                </div>
+                <div class="col-4">
+                    <p>INR {{camp.rate}} per night</p>
+                </div>
+            </div>
+            
+            <form class="form" [formGroup] ="formValue" (submit)="booking()" >
+                
+                <p>Total Stay:  {{bookingcamp.totalStay}} nights</p>
+                <p>Total Amount: INR {{bookingcamp.totalAmount}}  </p>
+
+                <p class="details">Please fill details below to add a camp</p>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Check-In Date</label>
+                    <input type="date" class="form-control" formControlName="checkInDate" [min]="todays_date" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter your address">
+                    
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Check-Out Date</label>
+                    <input type="date" class="form-control" formControlName="checkOutDate" [min]="tomorrows_date" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter your address">
+                    
+                </div>
+                
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Billing Address</label>
+                    <input (click)="check()" type="text" class="form-control" formControlName="billaddress" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter your address">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">State</label>
+                    <input type="text" class="form-control" formControlName="state" id="exampleInputPassword1" placeholder="enter your state">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Country</label>
+                    <input type="text" class="form-control" formControlName="country" id="exampleInputPassword1" placeholder="enter your country">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Zip Code</label>
+                    <input type="number" class="form-control" formControlName="zipcode" id="description" placeholder="enter your pincode">
+                    
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Cell Phone</label>
+                    <input type="number" class="form-control" formControlName="cellphone" id="description" placeholder="enter your mobile number">
+                    
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="formValue.invalid" >Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+</div>
+

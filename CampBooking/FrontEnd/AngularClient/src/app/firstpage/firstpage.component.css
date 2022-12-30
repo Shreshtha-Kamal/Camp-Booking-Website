@@ -1,0 +1,69 @@
+
+
+
+.container-fluid
+{
+    margin-top:2px
+}
+#buttons
+{
+    text-align:right;
+}
+.row
+{
+    margin-left:2px;
+}
+#search{
+    background-color:lightblue;
+    /*height:250px;*/
+    
+}
+.search{
+    text-align:center;
+}
+.cart {
+    background-color: lightblue;
+    height: auto;
+}
+#input
+{
+    margin-left:10px;
+}
+#dropbox {
+    margin-left: 10px;
+    width: 192px;
+}
+#searchButton {
+    width:93%;
+    margin-left: 14px;
+    margin-top: 11px;
+    margin-bottom: 5px;
+
+}
+#row
+{
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 110px;
+}
+#image
+{
+    height: 107px;
+    width: 107px;
+}
+.capacity{
+    margin-top: 20px;
+    font-style: italic;
+    color: blue;
+    background-color: aliceblue;
+    width: 115px;
+    padding: 0px 6px;
+    border-radius: 4px;
+}
+#col3
+{
+    padding-left: 0px;
+}
+/* .col-4{
+    text-align: end;
+} */

@@ -1,0 +1,39 @@
+.container {
+
+    background-color: lightblue;
+
+    width: 30%;
+
+    margin-top: 60px;
+
+}
+
+.mb-3 {
+
+    display: flex;
+
+    margin-top:30px
+
+    /*width: 70%;*/
+
+}
+
+.form-label
+
+{
+
+    width:230px;
+
+}
+
+.btn {
+
+    width: 100%;
+
+    height: 42px;
+
+    margin-bottom: 20px;
+
+    margin-top: 10px;
+
+}
